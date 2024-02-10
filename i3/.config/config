@@ -189,3 +189,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# display resolution
+exec_always xrandr --output HDMI-1 --mode 1920x1080
+

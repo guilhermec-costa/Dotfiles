@@ -1,16 +1,13 @@
 scrolling = { history = 10000 , multiplier = 3}
 mouse.hide_when_typing = true
 
-window.opacity = 0.8
+window.opacity = 0.4
 window.padding = { x = 10, y = 5}
 
 [[keyboard.bindings]]
 key="v"
 action="ToggleViMode"
 mods="Control|Alt"
-
-
-
 
 [font]
 normal.family = "FiraCode Nerd Font"
