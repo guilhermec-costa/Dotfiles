@@ -191,10 +191,10 @@ bar {
 }
 
 # gaps between windows
-gaps inner 4px
+gaps inner 8px
 
 # display resolution
 exec_always xrandr --output HDMI-1 --mode 1920x1080
-exec_always xwallpaper --center ~/.dotfiles/wallpaper/.config/beach.jpg
+exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/purple_skyy.jpg
 exec_always picom
 
