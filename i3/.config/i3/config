@@ -157,8 +157,6 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This ill end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Shift+p exec "~/test_script.sh"
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -199,5 +197,6 @@ gaps inner 8px
 # display resolution
 exec_always xrandr --output HDMI-1 --mode 1920x1080
 exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/purple_skyy.jpg
+exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh
 exec_always picom
 
