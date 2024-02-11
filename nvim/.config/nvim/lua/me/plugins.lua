@@ -32,6 +32,7 @@ return packer.startup(function(use)
     use 'oxfist/night-owl.nvim'
     use 'Mofiqul/dracula.nvim'
     use 'preservim/nerdtree'
+    use 'folke/tokyonight.nvim'
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
