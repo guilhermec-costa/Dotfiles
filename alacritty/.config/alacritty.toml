@@ -17,6 +17,11 @@ mods="Control|Alt"
 normal.family = "FiraCode Nerd Font"
 normal.style = "Medium"
 
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "bold"
+
+
 [colors.primary]
 background = "#24283b"
 foreground = "#a9b1d6"
