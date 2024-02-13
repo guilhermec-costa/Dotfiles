@@ -1,5 +1,7 @@
 export EDITOR="nvim"
 export TERMINAL="alacritty"
+
+# nvm path
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_
 CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -8,7 +10,6 @@ CONFIG_HOME}/nvm")"
 # Enable colors and change prompt:
 autoload -U colors && colors
 autoload -Uz add-zsh-hook
-
 
 # for recent files
 DIRSTACKFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/dirs"
@@ -42,6 +43,9 @@ _comp_options+=(globdots)
 alias src="source $HOME/.zshrc"
 alias ls="ls -m --color=auto"
 alias cat="bat"
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # start theme
 eval "$(starship init zsh)"
