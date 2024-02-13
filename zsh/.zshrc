@@ -43,6 +43,12 @@ _comp_options+=(globdots)
 alias src="source $HOME/.zshrc"
 alias ls="ls -m --color=auto"
 alias cat="bat"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
