@@ -5,6 +5,7 @@ mouse.bindings = [
     {mouse="Right",mods="Control",action="Paste"},
 ]
 
+
 window.padding = { x = 3}
 
 [[keyboard.bindings]]

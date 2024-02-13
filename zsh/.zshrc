@@ -1,3 +1,10 @@
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_
+CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
 # Enable colors and change prompt:
 autoload -U colors && colors
 autoload -Uz add-zsh-hook
