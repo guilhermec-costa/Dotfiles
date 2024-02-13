@@ -189,6 +189,7 @@ client.focused #373B41 #32344a #fdf6e3 #32344a
 # }
 
 # gaps between windows
+for_window [class="^.*"] border pixel 1
 gaps inner 8px
 
 # exec rofi modes
@@ -196,7 +197,7 @@ bindsym Control+r exec --no-startup-id rofi -show drun
 
 # display resolution
 exec_always xrandr --output HDMI-1 --mode 1920x1080
-exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/purple_skyy.jpg
+exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/cat.jpg
 exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh
 exec_always picom
 
