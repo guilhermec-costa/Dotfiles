@@ -3,6 +3,7 @@ mouse.hide_when_typing = true
 mouse.bindings = [
     {mouse="Right", action="ExpandSelection"},
     {mouse="Right",mods="Control",action="Paste"},
+    {mouse="Right", mods="Shift", action="ExpandSelection"}
 ]
 
 
@@ -14,8 +15,7 @@ action="ToggleViMode"
 mods="Control|Alt"
 
 [font]
-normal.family = "FiraCode Nerd Font"
-normal.style = "Medium"
+normal.family = "FiraCode Nerd Font Sembd"
 
 [font.bold]
 family = "FiraCode Nerd Font"
