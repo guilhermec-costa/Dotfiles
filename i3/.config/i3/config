@@ -81,6 +81,7 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+b layout toggle split
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -186,10 +187,11 @@ gaps inner 8px
 
 # exec rofi modes
 bindsym Control+t exec --no-startup-id rofi -show drun
+bindsym Control+s exec --no-startup-id  flameshot gui
 
 # display resolution
 exec_always xrandr --output HDMI-1 --mode 1920x1080
-exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/cat.jpg
+exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/cassino.jpg
 exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh
 exec_always picom
 
