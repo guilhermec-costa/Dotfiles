@@ -1,6 +1,6 @@
 vim.cmd 'colorscheme default'
 
-local default_color = 'tokyonight-night'
+local default_color = 'night-owl'
 
 local color_status, _ = pcall(vim.cmd, "colorscheme " .. default_color)
 if not color_status then
