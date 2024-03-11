@@ -31,7 +31,6 @@ return packer.startup(function(use)
     use 'rose-pine/neovim'
     use 'oxfist/night-owl.nvim'
     use 'Mofiqul/dracula.nvim'
-    use 'preservim/nerdtree'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
 
@@ -86,7 +85,6 @@ return packer.startup(function(use)
     }
 
     use {'nvim-tree/nvim-web-devicons'}
-    use "tiagofumo/vim-nerdtree-syntax-highlight"
 
     use {
         'numToStr/Comment.nvim',
