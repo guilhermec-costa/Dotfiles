@@ -45,7 +45,7 @@ require('telescope').setup {
                     ["<C-f>"] = fb_actions.toggle_browser,
                     ["<C-h>"] = fb_actions.toggle_hidden,
                     ["<C-s>"] = fb_actions.toggle_all,
-                    ["<bs>"] = fb_actions.backspace,
+                    ["<bs>"] = false,
                 },
                 -- Default + custom keybinds
                 ["n"] = {
@@ -66,5 +66,5 @@ require('telescope').load_extension "file_browser"
 
 vim.api.nvim_set_keymap('n', '<leader>tb', '<Cmd>Telescope file_browser<CR>',
     { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fp', '<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>',
+vim.api.nvim_set_keymap('n', '<leader>fb', '<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>',
     { noremap = true })
