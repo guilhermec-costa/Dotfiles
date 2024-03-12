@@ -1,4 +1,6 @@
 local builtin = require('telescope.builtin')
+local actions = require("telescope.actions")
+local telescope = require("telescope")
 
 vim.keymap.set('n', '<leader>/', function()
     -- You can pass additional configuration to telescope to change theme, layout, etc.
@@ -24,3 +26,15 @@ vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>B', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>C', builtin.git_commits, {})
+
+telescope.setup({
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-n>"] = actions.move_selection_next,
+                ["<C-m>"] = actions.move_selection_previous
+            }
+        }
+    }
+})
+
