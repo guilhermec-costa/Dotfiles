@@ -150,11 +150,6 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["night-owl.nvim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/night-owl.nvim",
-    url = "https://github.com/oxfist/night-owl.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -234,6 +229,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-nightfly-colors"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
+    url = "https://github.com/bluz71/vim-nightfly-colors"
   },
   ["vim-prisma"] = {
     loaded = true,

@@ -29,7 +29,6 @@ return packer.startup(function(use)
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
     use 'rose-pine/neovim'
-    use 'oxfist/night-owl.nvim'
     use 'Mofiqul/dracula.nvim'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
@@ -94,4 +93,5 @@ return packer.startup(function(use)
     }
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'
+    use 'bluz71/vim-nightfly-colors'
 end)
