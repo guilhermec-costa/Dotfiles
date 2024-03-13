@@ -1,15 +1,8 @@
 local builtin = require('telescope.builtin')
 
-vim.keymap.set('n', '<leader>/', function()
-    -- You can pass additional configuration to telescope to change theme, layout, etc.
-    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-    })
-end, { desc = '[/] Fuzzily search in current buffer' })
 
-vim.keymap.set('n', '<leader>ff', function() builtin.find_files({hidden=false}) end, {})
-vim.keymap.set('n', '<leader>fH', function() builtin.find_files({hidden=true}) end, {})
+vim.keymap.set('n', '<leader>ff', function() builtin.find_files({hidden=true}) end, {})
+--[[ vim.keymap.set('n', '<leader>fH', function() builtin.find_files({hiddeo=true}) end, {}) ]]
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
@@ -24,5 +17,26 @@ vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>B', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>C', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>cb', builtin.git_bcommits, {})
+vim.keymap.set('n', '<leader>qf', builtin.quickfix, {})
+vim.keymap.set('n', '<leader>rs', builtin.search_history, {})
+vim.keymap.set('n', '<leader>P', builtin.pickers, {})
 
+
+-- enable colorscheme preview on switch
+require("telescope").setup {
+    pickers = {
+        colorscheme = {
+            enable_preview = true
+        }
+    }
+}
+
+vim.keymap.set('n', '<leader>/', function()
+    -- You can pass additional configuration to telescope to change theme, layout, etc.
+    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+        winblend = 10,
+        previewer = false,
+    })
+end, { desc = '[/] Fuzzily search in current buffer' })
 
