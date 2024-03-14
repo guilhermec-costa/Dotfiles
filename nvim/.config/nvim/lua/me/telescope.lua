@@ -1,7 +1,7 @@
 local builtin = require('telescope.builtin')
 
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 --[[ vim.keymap.set('n', '<leader>fH', function() builtin.find_files({hiddeo=true}) end, {}) ]]
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, {})
@@ -15,11 +15,12 @@ vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>B', builtin.git_branches, {})
-vim.keymap.set('n', '<leader>C', builtin.git_commits, {})
+vim.keymap.set('n', '<leader>cc', builtin.git_commits, {})
 vim.keymap.set('n', '<leader>cb', builtin.git_bcommits, {})
 vim.keymap.set('n', '<leader>S', builtin.git_stash, {})
-vim.keymap.set('n', '<leader>qf', builtin.quickfix, {})
+vim.keymap.set('n', '<leader>qq', builtin.quickfix, {})
 vim.keymap.set('n', '<leader>rs', builtin.search_history, {})
 vim.keymap.set('n', '<leader>P', builtin.pickers, {})
 
@@ -42,7 +43,7 @@ require("telescope").setup {
 
         find_files = {
             hidden = true
-        }
+        },
     },
 }
 
