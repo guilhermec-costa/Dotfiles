@@ -185,6 +185,9 @@ client.focused #373B41 #32344a #fdf6e3 #32344a
 for_window [class="^.*"] border pixel 1
 gaps inner 8px
 
+# start sxhkd
+exec_always sxhkd
+
 # exec rofi modes
 bindsym Control+t exec --no-startup-id rofi -show drun
 bindsym Control+p exec --no-startup-id  flameshot gui
