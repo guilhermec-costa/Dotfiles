@@ -29,6 +29,15 @@ local cmp_action = require('lsp-zero').cmp_action()
 
 
 cmp.setup({
+    sources = {
+        {
+            name = 'path',
+            option = {
+                label_trailing_slash  = true
+            },
+        },
+    },
+
     mapping = cmp.mapping.preset.insert({
         -- `Enter` key to confirm completion
         ['<CR>'] = cmp.mapping.confirm({ select = false }),
