@@ -15,6 +15,7 @@ vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
 vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
 vim.keymap.set('n', '<leader>B', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>cc', builtin.git_commits, {})
 vim.keymap.set('n', '<leader>cb', builtin.git_bcommits, {})
@@ -23,10 +24,6 @@ vim.keymap.set('n', '<leader>qq', builtin.quickfix, {})
 vim.keymap.set('n', '<leader>rs', builtin.search_history, {})
 vim.keymap.set('n', '<leader>P', builtin.pickers, {})
 
-
--- enable colorscheme preview on switch
-
-local actions = require('telescope.actions')
 require("telescope").setup {
     pickers = {
         colorscheme = {

@@ -19,30 +19,39 @@ normal.family = "FiraCode Nerd Font Propo SemBd"
 [font.bold]
 family = "FiraCode Nerd Font"
 style = "bold"
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#7c8f8f"
+blue = "#82aaff"
+cyan = "#7fdbca"
+green = "#21c7a8"
+magenta = "#ae81ff"
+red = "#ff5874"
+white = "#d6deeb"
+yellow = "#ecc48d"
+
+[colors.cursor]
+cursor = "#9ca1aa"
+text = "#080808"
+
+[colors.normal]
+black = "#1d3b53"
+blue = "#82aaff"
+cyan = "#7fdbca"
+green = "#a1cd5e"
+magenta = "#c792ea"
+red = "#fc514e"
+white = "#a1aab8"
+yellow = "#e3d18a"
 
 [colors.primary]
-background = "#1b1e30"
-foreground = "#c0caf5"
+background = "#011627"
+bright_foreground = "#eeeeee"
+foreground = "#bdc1c6"
 
-# Normal colors
-[colors.normal]
-black = "#4b5263"
-red = "#ff7e67"
-green = "#a8cc8c"
-yellow = "#ffcc66"
-blue = "#82aaff"
-magenta = "#c792ea"
-cyan = "#89ddff"
-white = "#d0d7e5"
-
-# Bright colors
-[colors.bright]
-black = "#676e95"
-red = "#ff7e67"
-green = "#a8cc8c"
-yellow = "#ffcc66"
-blue = "#82aaff"
-magenta = "#c792ea"
-cyan = "#89ddff"
-white = "#d0d7e5"
+[colors.selection]
+background = "#b2ceee"
+text = "#080808"
 

@@ -1,4 +1,8 @@
 require('lualine').setup {
+    options = {
+        theme = "nightfly"
+    },
+
     sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
