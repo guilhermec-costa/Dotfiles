@@ -7,7 +7,6 @@ mouse.bindings = [
 ]
 
 
-window.padding = { x = 3}
 
 [[keyboard.bindings]]
 key="v"
