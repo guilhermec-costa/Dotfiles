@@ -33,6 +33,8 @@ return packer.startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'mfussenegger/nvim-jdtls'
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
@@ -95,4 +97,5 @@ return packer.startup(function(use)
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'
     use 'bluz71/vim-nightfly-colors'
+
 end)

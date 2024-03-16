@@ -43,3 +43,6 @@ keymap('n', '<C-d>', '<C-e>', options)
 -- nerdtree
 keymap('n', '<leader>o', ':NERDTreeToggle<CR>', options)
 keymap('n', '<leader>R', ':NERDTreeRefreshRoot<CR>', options)
+
+-- oil setup
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
