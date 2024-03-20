@@ -1,43 +1,65 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-local workspace_dir = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-
-local config = {
-  cmd = {
-    'java', -- or '/path/to/java17_or_newer/bin/java'
-    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-    '-Dosgi.bundles.defaultStartLevel=4',
-    '-Declipse.product=org.eclipse.jdt.ls.core.product',
-    '-Dlog.protocol=true',
-    '-Dlog.level=ALL',
-    '-Xmx1g',
-    '--add-modules=ALL-SYSTEM',
-    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    '-jar', '~/Library/java/jdt-language-server-1.9.0-202203031534/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar',
-    '-configuration', '~/Library/java/jdt-language-server-1.9.0-202203031534/config_linux',
-
-    -- specific data is store here
-    '-data', vim.fn.expand('./cache/jdtls-workspace') .. workspace_dir,
-  },
-
-  -- 💀
-  -- This is the default if not provided, you can remove it. Or adjust as needed.
-  -- One dedicated LSP server & client will be started per unique root_dir
-  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
-  capabilities = capabilities,
-
-  settings = {
-    java = {
+local capabilities = {
+    workspace = {
+        configuration = true
+    },
+    textDocument = {
+        completion = {
+            completionItem = {
+                snippetSupport = true
+            }
+        }
     }
-  },
-
-  init_options = {
-    bundles = {}
-  },
 }
 
--- This starts a new client & server,
--- or attaches to an existing client & server depending on the `root_dir`.
+local config = {
+    cmd = {"/home/guichina/.local/share/nvim/mason/bin/jdtls"},
+    signatureHelp = { enabled = true },
+    contentProvider = { preferred = 'fernflower' },  -- Use fernflower to decompile library code
+    -- Specify any completion options
+    completion = {
+    favoriteStaticMembers = {
+      "org.hamcrest.MatcherAssert.assertThat",
+      "org.hamcrest.Matchers.*",
+      "org.hamcrest.CoreMatchers.*",
+      "org.junit.jupiter.api.Assertions.*",
+      "java.util.Objects.requireNonNull",
+      "java.util.Objects.requireNonNullElse",
+      "org.mockito.Mockito.*"
+    },
+    filteredTypes = {
+      "com.sun.*",
+      "io.micrometer.shaded.*",
+      "java.awt.*",
+      "jdk.*", "sun.*",
+        },
+    },
+    sources = {
+            organizeImports = {
+                starThreshold = 9999;
+                staticStarThreshold = 9999;
+        }
+    },
+
+    codeGeneration = {
+            toString = {
+              template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}"
+        }
+    },
+    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+    capabilities=capabilities
+}
+
+local opts = { noremap=true, silent=true }
+-- Java specific
+vim.keymap.set("n", "<leader>di", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
+vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'jdtls'.test_class()<CR>", opts)
+vim.keymap.set("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", opts)
+vim.keymap.set("v", "<leader>de", "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", opts)
+vim.keymap.set("n", "<leader>de", "<Cmd>lua require('jdtls').extract_variable()<CR>", opts)
+vim.keymap.set("v", "<leader>dm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", opts)
+
+require'jdtls.setup'.add_commands()
+require'jdtls'.setup_dap()
 require('jdtls').start_or_attach(config)
+
+
