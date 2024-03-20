@@ -1,0 +1,157 @@
+!SESSION 2024-03-20 19:28:16.488 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.2
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+Command-line arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.166
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.260
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.280
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.281
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.285
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.285
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.286
+!MESSAGE Wait for AutoBuildOffJob start
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.287
+!MESSAGE Wait for AutoBuildOffJob end 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.287
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.287
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.288
+!MESSAGE ProjectRegistryRefreshJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.288
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.294
+!MESSAGE Started org.eclipse.buildship.core 6ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.304
+!MESSAGE LoadingGradleVersionJob finished 10ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.312
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.313
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.345
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.601
+!MESSAGE Workspace initialized in 296ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.637
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.639
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.647
+!MESSAGE >> New configuration: {java=[]}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.648
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.652
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.730
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.732
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:17.732
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:21.123
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:21.222
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:21.341
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:21.399
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:27.100
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:27.933
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:28.059
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:28.125
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:28.911
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:28.917
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 4 0 2024-03-20 19:28:28.918
+!MESSAGE file:///home/guichina/.dotfiles/nvim/.config/nvim/ftplugin/java.lua does not resolve to a ICompilationUnit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:28.970
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:49.778
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:50.069
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:50.286
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:50.540
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:50.790
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:52.254
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:52.414
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:52.545
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:28:52.610
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:30:46.786
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:30:46.866
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-20 19:30:57.823
+!MESSAGE >> document/signatureHelp
