@@ -1,6 +1,6 @@
 
  local cfg = {
-  debug = false, -- set to true to enable debug logging
+ debug = false, -- set to true to enable debug logging
   bind = true, -- This is mandatory, otherwise border config won't get registered.
   doc_lines = 10, -- will show two lines of comment/doc(if there are more than two lines in doc, will be truncated);
   max_height = 16, -- max height of signature floating_window

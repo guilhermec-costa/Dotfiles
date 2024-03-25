@@ -44,5 +44,18 @@ keymap('n', '<C-d>', '<C-e>', options)
 keymap('n', '<leader>o', ':NERDTreeToggle<CR>', options)
 keymap('n', '<leader>R', ':NERDTreeRefreshRoot<CR>', options)
 
+
+vim.keymap.set('n', "<leader>ca", '<Cmd>lua vim.lsp.buf.code_action()<CR>', options);
+vim.keymap.set('n', "<leader>rc", "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
+    { noremap=true, silent=true, desc = "Code actions" });
+-- Java specific
+vim.keymap.set("n", "<leader>di", "<Cmd>lua require'jdtls'.organize_imports()<CR>", options)
+vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'jdtls'.test_class()<CR>", options)
+vim.keymap.set("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", options)
+vim.keymap.set("v", "<leader>de", "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", options)
+vim.keymap.set("n", "<leader>de", "<Cmd>lua require('jdtls').extract_variable()<CR>", options)
+vim.keymap.set("v", "<leader>dm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", options)
+vim.keymap.set("n", "<leader>rj", "<Esc><Cmd>JdtRestart<CR>", options)
+
 -- oil setup
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

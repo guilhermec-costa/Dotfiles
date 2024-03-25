@@ -33,8 +33,29 @@ return packer.startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'mfussenegger/nvim-jdtls'
+    --[[ use {'nvim-java/nvim-java', ]]
+    --[[     requires = { ]]
+    --[[       'nvim-java/lua-async-await', ]]
+    --[[       'nvim-java/nvim-java-core', ]]
+    --[[       'nvim-java/nvim-java-test', ]]
+    --[[       'nvim-java/nvim-java-dap', ]]
+    --[[       'MunifTanjim/nui.nvim', ]]
+    --[[       'neovim/nvim-lspconfig', ]]
+    --[[       'mfussenegger/nvim-dap', ]]
+    --[[       { ]]
+    --[[         'williamboman/mason.nvim', ]]
+    --[[         config = { ]]
+    --[[           registries = { ]]
+    --[[             'github:nvim-java/mason-registry', ]]
+    --[[             'github:mason-org/mason-registry', ]]
+    --[[           }, ]]
+    --[[         }, ]]
+    --[[       }, ]]
+    --[[     }, ]]
+    --[[ } ]]
+    use {'nvim-telescope/telescope-ui-select.nvim' }
     use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
     use 'mxsdev/nvim-dap-vscode-js'
     use {
          "microsoft/vscode-js-debug",

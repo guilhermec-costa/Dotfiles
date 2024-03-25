@@ -14,15 +14,7 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 
-require('lspconfig').lua_ls.setup {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-}
+local lspconfig = require('lspconfig')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
