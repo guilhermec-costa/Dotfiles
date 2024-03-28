@@ -67,7 +67,7 @@ local config = {
 }
 
 local opts = { noremap=true, silent=true }
--- Java specific
+-- Java specific keymaps. Code action options are beautiful
 vim.keymap.set("n", "<leader>di", "<Cmd>lua require'jdtls'.organize_imports()<CR>", opts)
 vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'jdtls'.test_class()<CR>", opts)
 vim.keymap.set("n", "<leader>dn", "<Cmd>lua require'jdtls'.test_nearest_method()<CR>", opts)
