@@ -14,44 +14,46 @@ action="ToggleViMode"
 mods="Control|Alt"
 
 [font]
-normal.family = "FiraCode Nerd Font Propo SemBd"
+normal.family = "Monaspace Neon"
+normal.style = "semibold italic"
 
 [font.bold]
-family = "FiraCode Nerd Font"
-style = "bold"
+family = "Monaspace Neon"
+style = "semibold italic"
 [colors]
 draw_bold_text_with_bright_colors = true
 
-[colors.bright]
-black = "#7c8f8f"
-blue = "#82aaff"
-cyan = "#7fdbca"
-green = "#21c7a8"
-magenta = "#ae81ff"
-red = "#ff5874"
-white = "#d6deeb"
-yellow = "#ecc48d"
-
-[colors.cursor]
-cursor = "#9ca1aa"
-text = "#080808"
-
-[colors.normal]
-black = "#1d3b53"
-blue = "#82aaff"
-cyan = "#7fdbca"
-green = "#a1cd5e"
-magenta = "#c792ea"
-red = "#fc514e"
-white = "#a1aab8"
-yellow = "#e3d18a"
-
+# Default colors
 [colors.primary]
-background = "#011627"
-bright_foreground = "#eeeeee"
-foreground = "#bdc1c6"
+background = '#0d1117'
+foreground = '#b3b1ad'
 
-[colors.selection]
-background = "#b2ceee"
-text = "#080808"
+# Normal colors
+[colors.normal]
+black   = '#484f58'
+red     = '#ff7b72'
+green   = '#3fb950'
+yellow  = '#d29922'
+blue    = '#58a6ff'
+magenta = '#bc8cff'
+cyan    = '#39c5cf'
+white   = '#b1bac4'
 
+# Bright colors
+[colors.bright]
+black   = '#6e7681'
+red     = '#ffa198'
+green   = '#56d364'
+yellow  = '#e3b341'
+blue    = '#79c0ff'
+magenta = '#d2a8ff'
+cyan    = '#56d4dd'
+white   = '#f0f6fc'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#d18616'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#ffa198'

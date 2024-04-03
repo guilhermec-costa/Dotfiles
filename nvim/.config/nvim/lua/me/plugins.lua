@@ -29,6 +29,7 @@ return packer.startup(function(use)
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
     use 'rose-pine/neovim'
+    use 'projekt0n/github-nvim-theme'
     use 'Mofiqul/dracula.nvim'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'

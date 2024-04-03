@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/dracula.nvim",
     url = "https://github.com/Mofiqul/dracula.nvim"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   harpoon = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/harpoon",

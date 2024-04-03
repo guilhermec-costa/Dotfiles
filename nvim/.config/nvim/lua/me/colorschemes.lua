@@ -1,6 +1,6 @@
 vim.cmd 'colorscheme default'
 
-local default_color = 'nightfly'
+local default_color = 'github_dark_default'
 
 vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
 
