@@ -35,11 +35,6 @@ keymap('v', '<A-k>', ':m .-2<CR>==gv', options)
 --     vim.cmd('w')
 -- end)
 
--- scroll screen
-keymap('n', '<C-u>', '<C-y>', options)
-keymap('n', '<C-d>', '<C-e>', options)
-
-
 -- nerdtree
 keymap('n', '<leader>o', ':NERDTreeToggle<CR>', options)
 keymap('n', '<leader>R', ':NERDTreeRefreshRoot<CR>', options)

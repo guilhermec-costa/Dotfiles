@@ -28,9 +28,7 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
-    use 'rose-pine/neovim'
     use 'projekt0n/github-nvim-theme'
-    use 'Mofiqul/dracula.nvim'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
@@ -55,7 +53,6 @@ return packer.startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'xiyaowong/transparent.nvim'
-    use 'ryanoasis/vim-devicons'
 
     use {
         'VonHeikemen/lsp-zero.nvim',

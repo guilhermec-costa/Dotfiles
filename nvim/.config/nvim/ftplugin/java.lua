@@ -94,6 +94,7 @@ vim.keymap.set("n", "<leader>tm", "<Cmd>lua require'jdtls'.test_nearest_method()
 vim.keymap.set("v", "<leader>de", "<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>", opts)
 vim.keymap.set("n", "<leader>de", "<Cmd>lua require('jdtls').extract_variable()<CR>", opts)
 vim.keymap.set("v", "<leader>dm", "<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>", opts)
+vim.keymap.set("n", "<leader>gt", "<Esc><Cmd>lua require('jdtls.tests').generate()<CR>", opts)
 
 require('jdtls').start_or_attach(config)
 
