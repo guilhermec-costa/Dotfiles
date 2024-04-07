@@ -17,9 +17,5 @@ autocmd('TextYankPost', {
     end,
 })
 
-function Replace_in_range()
-    local replacer = input();
-        --[[ vim.cmd(":%s/" .. current .. "/" .. replacer .. "/g") ]]
-end
 
 vim.cmd("set nohlsearch")

@@ -10,6 +10,8 @@ keymap('n', '<C-j>', '<C-w>j', options)
 keymap('n', '<C-l>', '<C-w>l', options)
 keymap('n', '<C-h>', '<C-w>h', options)
 keymap('n', "<leader>q", ":q", options)
+keymap('n', "<C-d>", "<C-d>zz", options)
+keymap('n', "<C-u>", "<C-u>zz", options)
 
 keymap('n', '<C-s>l', ':vsplit<CR>', options)
 keymap('n', '<C-s>j', ':split<CR>', options)
