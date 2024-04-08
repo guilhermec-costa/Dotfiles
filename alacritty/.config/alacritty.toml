@@ -15,11 +15,11 @@ mods="Control|Alt"
 
 [font]
 normal.family = "Monaspace Neon"
-normal.style = "semibold italic"
+normal.style = "semibold"
 
 [font.bold]
 family = "Monaspace Neon"
-style = "semibold italic"
+style = "semibold"
 [colors]
 draw_bold_text_with_bright_colors = true
 
