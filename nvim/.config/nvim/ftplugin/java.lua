@@ -30,6 +30,7 @@ local config = {
         '--add-modules=ALL-SYSTEM',
         '--add-opens', 'java.base/java.util=ALL-UNNAMED',
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+        '-javaagent:' .. home .. '/.local/share/eclipse/lombok.jar',
         '-jar', vim.fn.glob(home .. '/dev/eclipse/eclipse.jdt.ls/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar'),
     },
 
@@ -85,6 +86,14 @@ local config = {
     root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
     capabilities=capabilities
 }
+
+local extendedClientCapabilities = require'jdtls'.extendedClientCapabilities
+    extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
+    config.init_options = {
+    -- bundles = bundles;
+    extendedClientCapabilities = extendedClientCapabilities;
+}
+
 
 local opts = { noremap=true, silent=true }
 -- Java specific keymaps. Code action options are beautiful
