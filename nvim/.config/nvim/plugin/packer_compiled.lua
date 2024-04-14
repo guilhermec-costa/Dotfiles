@@ -213,8 +213,9 @@ _G.packer_plugins = {
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -256,16 +257,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-nightfly-colors"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-nightfly-colors",
-    url = "https://github.com/bluz71/vim-nightfly-colors"
-  },
-  ["vim-prisma"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-prisma",
-    url = "https://github.com/prisma/vim-prisma"
   },
   ["vscode-js-debug"] = {
     loaded = false,

@@ -45,7 +45,6 @@ return packer.startup(function(use)
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
-    use 'prisma/vim-prisma'
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -92,8 +91,6 @@ return packer.startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use {'nvim-tree/nvim-web-devicons'}
-
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -102,6 +99,5 @@ return packer.startup(function(use)
     }
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'
-    use 'bluz71/vim-nightfly-colors'
 
 end)
