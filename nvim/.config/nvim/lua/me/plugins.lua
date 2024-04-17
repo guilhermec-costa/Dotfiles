@@ -31,7 +31,7 @@ return packer.startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'norcalli/nvim-colorizer.lua'
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+    use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
     use {'nvim-telescope/telescope-ui-select.nvim' }
     use 'mfussenegger/nvim-dap'
@@ -43,15 +43,14 @@ return packer.startup(function(use)
          run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
 
-    use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
 
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
-    use 'L3MON4D3/LuaSnip'
+    -- use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
-    use 'xiyaowong/transparent.nvim'
+    --[[ use 'xiyaowong/transparent.nvim' ]]
 
     use {
         'VonHeikemen/lsp-zero.nvim',
