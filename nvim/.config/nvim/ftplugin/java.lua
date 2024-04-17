@@ -88,8 +88,8 @@ local config = {
 }
 
 local extendedClientCapabilities = require'jdtls'.extendedClientCapabilities
-    extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
-    config.init_options = {
+extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
+config.init_options = {
     -- bundles = bundles;
     extendedClientCapabilities = extendedClientCapabilities;
 }
