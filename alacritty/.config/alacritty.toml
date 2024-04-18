@@ -6,6 +6,9 @@ mouse.bindings = [
     {mouse="Right", mods="Shift", action="ExpandSelection"}
 ]
 
+[window.padding]
+y = 5
+x = 5
 
 
 [[keyboard.bindings]]

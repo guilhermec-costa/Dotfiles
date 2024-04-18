@@ -30,6 +30,7 @@ return packer.startup(function(use)
     use 'ThePrimeagen/harpoon'
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
+    use 'rose-pine/neovim'
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'

@@ -16,6 +16,3 @@ autocmd('TextYankPost', {
         })
     end,
 })
-
-
-vim.cmd("set nohlsearch")
