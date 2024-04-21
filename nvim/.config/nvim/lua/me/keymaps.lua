@@ -32,10 +32,10 @@ keymap('v', '>', '>gv', options)
 keymap('v', '<A-j>', ':m .+2<CR>==gv', options)
 keymap('v', '<A-k>', ':m .-2<CR>==gv', options)
 
--- keymap('n', '<leader>w', function()
---     vim.lsp.buf.format()
---     vim.cmd('w')
--- end)
+keymap('n', '<leader>w', function()
+    vim.lsp.buf.format()
+    vim.cmd('w')
+end)
 
 -- nerdtree
 keymap('n', '<leader>o', ':NERDTreeToggle<CR>', options)
@@ -44,7 +44,7 @@ keymap('n', '<leader>R', ':NERDTreeRefreshRoot<CR>', options)
 
 vim.keymap.set('n', "<leader>ca", '<Cmd>lua vim.lsp.buf.code_action()<CR>', options);
 vim.keymap.set('n', "<leader>rc", "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
-    { noremap=true, silent=true, desc = "Code actions" });
+    { noremap = true, silent = true, desc = "Code actions" });
 -- Java specific
 vim.keymap.set("n", "<leader>di", "<Cmd>lua require'jdtls'.organize_imports()<CR>", options)
 vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'jdtls'.test_class()<CR>", options)

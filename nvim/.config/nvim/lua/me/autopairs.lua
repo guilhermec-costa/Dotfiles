@@ -3,6 +3,7 @@ if not status_ok then
     return
 end
 
+
 npairs.setup({
     fast_wrap = {
       map = '<M-e>',

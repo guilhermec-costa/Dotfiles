@@ -17,7 +17,7 @@ action="ToggleViMode"
 mods="Control|Alt"
 
 [font]
-normal.family = "Monaspace Neon"
+normal.family = "Monaspace Argon"
 normal.style = "semibold"
 
 [font.bold]
