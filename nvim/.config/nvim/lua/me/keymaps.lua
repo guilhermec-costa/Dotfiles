@@ -1,4 +1,3 @@
-vim.api.nvim_set_hl(0, 'Normal', { bg = 'None' })
 local keymap = vim.keymap.set
 local options = { noremap = true, silent = true }
 
@@ -25,6 +24,8 @@ keymap('n', '<C-Down>', ':resize +2<CR>', options)
 keymap('n', '<C-Right>', ':vertical resize +2<CR>', options)
 keymap('n', '<C-Left>', ':vertical resize -2<CR>', options)
 
+keymap('n', '<leader>cl', '<CMD>nohlsearch<CR>')
+
 -- indent mode
 keymap('v', '<', '<gv', options)
 keymap('v', '>', '>gv', options)
@@ -37,14 +38,11 @@ keymap('n', '<leader>w', function()
     vim.cmd('w')
 end)
 
--- nerdtree
-keymap('n', '<leader>o', ':NERDTreeToggle<CR>', options)
-keymap('n', '<leader>R', ':NERDTreeRefreshRoot<CR>', options)
-
 
 vim.keymap.set('n', "<leader>ca", '<Cmd>lua vim.lsp.buf.code_action()<CR>', options);
 vim.keymap.set('n', "<leader>rc", "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
     { noremap = true, silent = true, desc = "Code actions" });
+
 -- Java specific
 vim.keymap.set("n", "<leader>di", "<Cmd>lua require'jdtls'.organize_imports()<CR>", options)
 vim.keymap.set("n", "<leader>dt", "<Cmd>lua require'jdtls'.test_class()<CR>", options)
@@ -68,17 +66,12 @@ vim.keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', options)
 vim.keymap.set('n', '<leader>0', '<Cmd>BufferLast<CR>', options)
 -- Close buffer
 vim.keymap.set('n', '<leader>Q', '<Cmd>BufferClose<CR>', options)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
--- Magic buffer-picking mode
+--[[ :BufferCloseAllButCurrent ]]
+--[[ :BufferCloseAllButPinned ]]
+--[[ :BufferCloseAllButCurrentOrPinned ]]
+--[[ :BufferCloseBuffersLeft ]]
+--[[ :BufferCloseBuffersRight ]]
 vim.keymap.set('n', '<C-p>', '<Cmd>BufferPick<CR>', options)
--- Sort automatically by...
 vim.keymap.set('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', options)
 vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', options)
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', options)
