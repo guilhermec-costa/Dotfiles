@@ -1,41 +1,16 @@
 vim.g.barbar_auto_setup = false -- disable auto-setup
 
 require'barbar'.setup {
-  -- Enable/disable animations
   animation = false,
-
-  -- Automatically hide the tabline when there are this many buffers left.
-  -- Set to any value >=0 to enable.
-  auto_hide = false,
-
-  -- Enable/disable current/total tabpages indicator (top right corner)
   tabpages = true,
-
-  -- Enables/disable clickable tabs
   clickable = true,
 
-
-  -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-  hide = {extensions = true, inactive = true},
-
-  -- Disable highlighting alternate buffers
-  highlight_alternate = false,
-
-  -- Disable highlighting file icons in inactive buffers
-  highlight_inactive_file_icons = false,
-
-  -- Enable highlighting visible buffers
-  highlight_visible = true,
-
   icons = {
-    -- Configure the base icons on the bufferline.
-    -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
-    buffer_index = false,
+    buffer_index = true,
     buffer_number = false,
     button = '',
-    -- Enables / disables diagnostic symbols
     diagnostics = {
-      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = '!'},
       [vim.diagnostic.severity.WARN] = {enabled = false},
       [vim.diagnostic.severity.INFO] = {enabled = false},
       [vim.diagnostic.severity.HINT] = {enabled = true},
@@ -46,24 +21,17 @@ require'barbar'.setup {
       deleted = {enabled = true, icon = '-'},
     },
     filetype = {
-      -- Sets the icon's highlight group.
-      -- If false, will use nvim-web-devicons colors
       custom_colors = false,
-
       -- Requires `nvim-web-devicons` if `true`
       enabled = true,
     },
+
     separator = {left = '▎', right = ''},
-
-    -- If true, add an additional separator at the end of the buffer list
     separator_at_end = true,
-
-    -- Configure the icons on the bufferline when modified or pinned.
-    -- Supports all the base icon options.
     modified = {button = '●'},
     pinned = {button = '', filename = true},
 
-    -- Use a preconfigured buffer appearance— can be 'default', 'powerline', or 'slanted'
+    -- can be 'default', 'powerline', or 'slanted'
     preset = 'default',
 
     -- Configure the icons on the bufferline based on the visibility of a buffer.
@@ -80,13 +48,13 @@ require'barbar'.setup {
   insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
-  maximum_padding = 1,
+  maximum_padding = 3,
 
   -- Sets the minimum padding width with which to surround each tab
   minimum_padding = 1,
 
   -- Sets the maximum buffer name length.
-  maximum_length = 30,
+  maximum_length = 45,
 
   -- Sets the minimum buffer name length.
   minimum_length = 0,
@@ -112,12 +80,9 @@ require'barbar'.setup {
     Outline = {event = 'BufWinLeave', text = 'symbols-outline', align = 'right'},
   },
 
-  -- New buffer letters are assigned in this order. This order is
-  -- optimal for the qwerty keyboard layout but might need adjustment
-  -- for other layouts.
+  -- New buffer letters are assigned in this order. 
   letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
 
   -- Sets the name of unnamed buffers. By default format is "[Buffer X]"
-  -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
 }

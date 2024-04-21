@@ -56,20 +56,18 @@ vim.keymap.set("n", "<leader>rj", "<Esc><Cmd>JdtRestart<CR>", options)
 
 vim.keymap.set('n', '<C-n>', '<Cmd>BufferPrevious<CR>', options)
 vim.keymap.set('n', '<C-m>', '<Cmd>BufferNext<CR>', options)
-vim.keymap.set('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', options)
-vim.keymap.set('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', options)
-vim.keymap.set('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', options)
-vim.keymap.set('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', options)
-vim.keymap.set('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', options)
-vim.keymap.set('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', options)
-vim.keymap.set('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', options)
-vim.keymap.set('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', options)
-vim.keymap.set('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', options)
-vim.keymap.set('n', '<A-0>', '<Cmd>BufferLast<CR>', options)
--- Pin/unpin buffer
-vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>', options)
+vim.keymap.set('n', '<leader>1', '<Cmd>BufferGoto 1<CR>', options)
+vim.keymap.set('n', '<leader>2', '<Cmd>BufferGoto 2<CR>', options)
+vim.keymap.set('n', '<leader>3', '<Cmd>BufferGoto 3<CR>', options)
+vim.keymap.set('n', '<leader>4', '<Cmd>BufferGoto 4<CR>', options)
+vim.keymap.set('n', '<leader>5', '<Cmd>BufferGoto 5<CR>', options)
+vim.keymap.set('n', '<leader>6', '<Cmd>BufferGoto 6<CR>', options)
+vim.keymap.set('n', '<leader>7', '<Cmd>BufferGoto 7<CR>', options)
+vim.keymap.set('n', '<leader>8', '<Cmd>BufferGoto 8<CR>', options)
+vim.keymap.set('n', '<leader>9', '<Cmd>BufferGoto 9<CR>', options)
+vim.keymap.set('n', '<leader>0', '<Cmd>BufferLast<CR>', options)
 -- Close buffer
-vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', options)
+vim.keymap.set('n', '<leader>Q', '<Cmd>BufferClose<CR>', options)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
