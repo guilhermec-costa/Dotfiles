@@ -34,6 +34,7 @@ return packer.startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
+    use 'romgrk/barbar.nvim'
     use {'nvim-telescope/telescope-ui-select.nvim' }
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
