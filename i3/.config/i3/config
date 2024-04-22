@@ -192,7 +192,7 @@ exec_always sxhkd
 bindsym Control+t exec --no-startup-id rofi -show drun
 bindsym Control+p exec --no-startup-id  flameshot gui
 
-# display resolution
+# display resolutioactualn
 exec_always xrandr --output HDMI-1 --mode 1920x1080
 exec_always xwallpaper --zoom ~/.dotfiles/wallpaper/.config/universe.jpg
 exec_always --no-startup-id ~/.dotfiles/polybar/.config/polybar/launch.sh

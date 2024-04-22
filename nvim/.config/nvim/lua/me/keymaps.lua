@@ -77,3 +77,8 @@ vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', options)
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', options)
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', options)
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', options)
+
+
+--[[ vim.keymap.set('n', '<leader>bd', ':lua require("me.telescope").grep_test()', options) ]]
+print(require("me.telescope").grep_test)
+

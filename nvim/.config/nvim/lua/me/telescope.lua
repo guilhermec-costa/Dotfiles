@@ -1,30 +1,54 @@
 local builtin = require('telescope.builtin')
+local skm = vim.keymap.set
 
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
---[[ vim.keymap.set('n', '<leader>fH', function() builtin.find_files({hiddeo=true}) end, {}) ]]
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>sw', builtin.grep_string, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>?', builtin.oldfiles, {})
-vim.keymap.set('n', '<leader>cs', builtin.colorscheme, {})
-vim.keymap.set('n', '<leader>K', builtin.keymaps, {})
-vim.keymap.set('n', '<leader>gr', builtin.lsp_references, {})
-vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
-vim.keymap.set('n', 'gd', builtin.lsp_definitions, {})
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {})
-vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
-vim.keymap.set('n', '<leader>D', builtin.diagnostics, {})
-vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
-vim.keymap.set('n', '<leader>B', builtin.git_branches, {})
-vim.keymap.set('n', '<leader>cc', builtin.git_commits, {})
-vim.keymap.set('n', '<leader>cb', builtin.git_bcommits, {})
-vim.keymap.set('n', '<leader>S', builtin.git_stash, {})
-vim.keymap.set('n', '<leader>qq', builtin.quickfix, {})
-vim.keymap.set('n', '<leader>rs', builtin.search_history, {})
-vim.keymap.set('n', '<leader>P', builtin.pickers, {})
+local action_state = require "telescope.actions.state"
+
+local function grep_test()
+    local opts = {}
+    opts.search_dirs = {"./"}
+    opts.prompt_title = "Random title"
+    opts.path_display = { "smart" }
+    opts.shorten_path = true
+    require("telescope.builtin").live_grep(opts);
+end
+
+
+skm('n', '<leader>ff', builtin.find_files, {})
+skm('n', '<leader>bd', grep_test, {})
+skm('n', '<leader>fg', builtin.live_grep, {})
+skm('n', '<leader>sw', builtin.grep_string, {})
+skm('n', '<leader>fb', builtin.buffers, {})
+skm('n', '<leader>fh', builtin.help_tags, {})
+skm('n', '<leader>?', builtin.oldfiles, {})
+skm('n', '<leader>cs', builtin.colorscheme, {})
+skm('n', '<leader>K', builtin.keymaps, {})
+skm('n', '<leader>gr', builtin.lsp_references, {})
+skm('n', '<leader>ds', builtin.lsp_document_symbols, {})
+skm('n', 'gd', builtin.lsp_definitions, {})
+skm('n', '<leader>rn', vim.lsp.buf.rename, {})
+skm('n', '<leader>D', builtin.diagnostics, {})
+skm('n', '<leader>gf', builtin.git_files, {})
+skm('n', '<leader>B', builtin.git_branches, {})
+skm('n', '<leader>cc', builtin.git_commits, {})
+skm('n', '<leader>cb', builtin.git_bcommits, {})
+skm('n', '<leader>S', builtin.git_stash, {})
+skm('n', '<leader>qq', builtin.quickfix, {})
+skm('n', '<leader>rs', builtin.search_history, {})
+skm('n', '<leader>P', builtin.pickers, {})
+skm('n', '<leader>c', builtin.commands, {})
+skm('n', '<leader>/', function()
+    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+        winblend = 10,
+        previewer = false,
+    })
+end, { desc = '[/] Fuzzily search in current buffer' })
 
 require("telescope").setup {
+    mappings = {
+        i =  {
+            ["<C-y>"] = require("telescope.actions").move_selection_next
+        }
+    },
     extensions = {
       ["ui-select"] = {
       require("telescope.themes").get_dropdown {
@@ -53,10 +77,7 @@ require("telescope").setup {
 
 require("telescope").load_extension("ui-select")
 
-vim.keymap.set('n', '<leader>/', function()
-    builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-        winblend = 10,
-        previewer = false,
-    })
-end, { desc = '[/] Fuzzily search in current buffer' })
+local M = {}
 
+
+return M
