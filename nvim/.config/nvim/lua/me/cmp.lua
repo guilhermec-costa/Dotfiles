@@ -25,9 +25,12 @@ cmp.setup({
         }
     },
     sources = {
-        { name = "nvim_lsp" },
-        { name = "treesitter" },
+        { name = "nvim_lua"},
+        { name = "nvim_lsp", keyword_length = 3},
         { name = "vsnip" },
         { name = "path" },
-    }
+        { name = "buffer" },
+    },
 })
+
+
