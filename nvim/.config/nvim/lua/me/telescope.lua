@@ -1,5 +1,7 @@
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
+local action_set = require('telescope.actions.set')
 local skm = vim.keymap.set
 
 local function grep_test()
@@ -44,12 +46,18 @@ end, { desc = '[/] Fuzzily search in current buffer' })
 
 require("telescope").setup {
     defaults = {
+        initial_mode = "insert",
         mappings = {
             i = {
-                ["<C-m>"] = {
+                ["<C-k>"] = {
                     actions.move_selection_previous, type = "action",
                     opts = { nowait = true, silent = true }
-                }
+                },
+                ["<C-j>"] = {
+                    actions.move_selection_next, type = "action",
+                    opts = { nowait = true, silent = true }
+                },
+                ["<CR>"] = "select_default"
             },
         },
 
@@ -60,17 +68,9 @@ require("telescope").setup {
         layout_strategy = "horizontal",
         sorting_strategy = "descending",
         layout_config = {
-          prompt_position = "bottom",
-          horizontal = {
-            width_padding = 0.04,
-            height_padding = 0.1,
-            preview_width = 0.4,
-          },
-          vertical = {
-            width_padding = 0.05,
-            height_padding = 1,
-            preview_height = 0.5,
-          },
+            horizontal = {
+                preview_width = 0.4,
+            },
         },
     },
     extensions = {
@@ -100,8 +100,3 @@ require("telescope").setup {
 
 
 require("telescope").load_extension("ui-select")
-
-local M = {}
-
-
-return M
