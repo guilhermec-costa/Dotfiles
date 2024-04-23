@@ -1,10 +1,7 @@
-require("me.telescope.keymaps")
+require("me.telescope.mappings")
 
-local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
-local action_set = require('telescope.actions.set')
-local skm = vim.keymap.set
 
 local M = {}
 
@@ -34,9 +31,7 @@ require("telescope").setup {
 
                 ["<CR>"] = "select_default"
             },
-            n = {
-                ["<S-p>"] = function() print(vim.inspect(action_state.get_selected_entry())) end
-            }
+            n = {}
         },
 
         preview = {
