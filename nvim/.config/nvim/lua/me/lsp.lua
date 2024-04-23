@@ -2,7 +2,7 @@ local lsp_status_ok, lsp_zero = pcall(require, 'lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
-    vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+    --[[ vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts) ]]
 end)
 
 require('lspconfig').lua_ls.setup {
@@ -15,7 +15,7 @@ require('lspconfig').lua_ls.setup {
     }
 }
 
-require('mason').setup({})
+require('mason').setup()
 require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {

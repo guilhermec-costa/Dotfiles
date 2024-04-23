@@ -1,6 +1,13 @@
+local skm = vim.keymap.set
+local options = { noremap = true, silent = true }
+
 require('gitsigns').setup {
-    signs                        = {
-        add          = { text = '│' },
+    signs = {
+        add = {
+            hl = "DiffAdd",
+            text = '│',
+            numhl = "GitSignsAddNr",
+        },
         change       = { text = '│' },
         delete       = { text = '_' },
         topdelete    = { text = '‾' },
@@ -40,3 +47,5 @@ require('gitsigns').setup {
         enable = false
     },
 }
+
+skm('n', '<leader>gb', ':Gitsigns blame_line<CR>', options)

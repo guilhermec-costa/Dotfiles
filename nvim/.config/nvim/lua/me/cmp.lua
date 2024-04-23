@@ -23,5 +23,11 @@ cmp.setup({
             cmp.ItemField.Abbr,
             cmp.ItemField.Kind,
         }
+    },
+    sources = {
+        { name = "nvim_lsp" },
+        { name = "treesitter" },
+        { name = "vsnip" },
+        { name = "path" },
     }
 })
