@@ -31,7 +31,8 @@ require("telescope").setup {
 
                 ["<CR>"] = "select_default"
             },
-            n = {}
+            n = {
+            }
         },
 
         preview = {

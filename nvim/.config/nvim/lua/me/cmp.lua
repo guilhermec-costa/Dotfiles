@@ -2,10 +2,9 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
-    mapping = cmp.mapping.preset.insert({
+    mapping = {
         -- `Enter` key to confirm completion
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
-
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
         -- Ctrl+Space to trigger completion menu
         ['<C-Space>'] = cmp.mapping.complete(),
 
@@ -17,6 +16,12 @@ cmp.setup({
 
         ['<C-n>'] = cmp_action.luasnip_supertab(),
         ['<C-m>'] = cmp_action.luasnip_shift_supertab()
-    })
+    },
+    formatting = {
+        fields = {
+            cmp.ItemField.Menu,
+            cmp.ItemField.Abbr,
+            cmp.ItemField.Kind,
+        }
+    }
 })
-
