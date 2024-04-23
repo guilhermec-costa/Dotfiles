@@ -1,11 +1,10 @@
 local builtin = require('telescope.builtin')
+local actions = require('telescope.actions')
 local skm = vim.keymap.set
-
-local action_state = require "telescope.actions.state"
 
 local function grep_test()
     local opts = {}
-    opts.search_dirs = {"./"}
+    opts.search_dirs = { "./" }
     opts.prompt_title = "Random title"
     opts.path_display = { "smart" }
     opts.shorten_path = true
@@ -44,17 +43,42 @@ skm('n', '<leader>/', function()
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 require("telescope").setup {
-    mappings = {
-        i =  {
-            ["<C-y>"] = require("telescope.actions").move_selection_next
-        }
+    defaults = {
+        mappings = {
+            i = {
+                ["<C-m>"] = {
+                    actions.move_selection_previous, type = "action",
+                    opts = { nowait = true, silent = true }
+                }
+            },
+        },
+
+        preview = {
+            msg_bg_fillchar = "",
+        },
+
+        layout_strategy = "horizontal",
+        sorting_strategy = "descending",
+        layout_config = {
+          prompt_position = "bottom",
+          horizontal = {
+            width_padding = 0.04,
+            height_padding = 0.1,
+            preview_width = 0.4,
+          },
+          vertical = {
+            width_padding = 0.05,
+            height_padding = 1,
+            preview_height = 0.5,
+          },
+        },
     },
     extensions = {
-      ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-        -- even more opts
-      }
-    }},
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+                -- even more opts
+            }
+        } },
 
     pickers = {
         colorscheme = {
