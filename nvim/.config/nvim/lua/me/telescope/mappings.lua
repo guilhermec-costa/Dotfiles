@@ -3,7 +3,7 @@ local skm = vim.keymap.set
 skm('n', '<leader>ff', require('telescope.builtin').find_files, {})
 skm('n', '<leader>fg', require('telescope.builtin').live_grep, {})
 skm('n', '<leader>sw', require('telescope.builtin').grep_string, {})
-skm('n', '<leader>bd', ':lua require("me.telescope").grep_test()<CR>', {})
+skm('n', '<leader>bd', ':lua require("me.telescope").grep_home()<CR>', {})
 skm('n', '<leader>fb', require('telescope.builtin').buffers, {})
 skm('n', '<leader>fh', require('telescope.builtin').help_tags, {})
 skm('n', '<leader>?', require('telescope.builtin').oldfiles, {})

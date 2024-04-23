@@ -18,7 +18,7 @@ keymap('n', '<leader>q', ':q<Enter>', options)
 keymap('n', '<leader>pv', function() vim.cmd('Ex') end)
 keymap('n', '<leader>cl', ':nohlsearch<CR>', options)
 keymap('n', "<leader><leader>", ':so<CR>')
-keymap('n', '<leader>cp', '":p')
+keymap('n', '<leader>cp', '"kp')
 -- window resizing
 
 keymap('n', '<C-Up>', ':resize -2<CR>', options)

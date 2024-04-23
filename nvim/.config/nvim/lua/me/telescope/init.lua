@@ -6,7 +6,7 @@ local action_state = require('telescope.actions.state')
 
 local M = {}
 
-M.grep_test = function()
+M.grep_home = function()
     local opts = {}
     opts.search_dirs = { "~/" }
     opts.prompt_title = "Home files"
@@ -36,7 +36,7 @@ require("telescope").setup {
                 ["<C-a>"] = function()
                     local entry = action_state.get_selected_entry()
                     local current_path = entry[1]
-                    vim.keymap.set("n", "<C-f>", ':' .. current_path, options)
+                    vim.cmd('redir @k | echo "' .. current_path .. '"' .. "| redir END")
                 end
             }
         },
@@ -65,7 +65,6 @@ require("telescope").setup {
             enable_preview = true
         },
 
-        -- enable live grep to work on hidden files
         live_grep = {
             additional_args = function()
                 return { "--hidden" }
