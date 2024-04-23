@@ -16,15 +16,15 @@ keymap('n', '<C-s>l', ':vsplit<CR>', options)
 keymap('n', '<C-s>j', ':split<CR>', options)
 keymap('n', '<leader>q', ':q<Enter>', options)
 keymap('n', '<leader>pv', function() vim.cmd('Ex') end)
-keymap('n', '<leader>c', ':nohlsearch<Enter>', options)
-
+keymap('n', '<leader>cl', ':nohlsearch<CR>', options)
+keymap('n', "<leader><leader>", ':so<CR>')
+keymap('n', '<leader>cp', '":p')
 -- window resizing
+
 keymap('n', '<C-Up>', ':resize -2<CR>', options)
 keymap('n', '<C-Down>', ':resize +2<CR>', options)
 keymap('n', '<C-Right>', ':vertical resize +2<CR>', options)
 keymap('n', '<C-Left>', ':vertical resize -2<CR>', options)
-
-keymap('n', '<leader>cl', '<CMD>nohlsearch<CR>')
 
 -- indent mode
 keymap('v', '<', '<gv', options)
@@ -77,6 +77,3 @@ vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', options)
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', options)
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', options)
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', options)
-
-
-

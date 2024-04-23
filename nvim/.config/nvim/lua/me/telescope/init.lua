@@ -1,4 +1,5 @@
 require("me.telescope.mappings")
+local options = { noremap = true }
 
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
@@ -7,11 +8,11 @@ local M = {}
 
 M.grep_test = function()
     local opts = {}
-    opts.search_dirs = { "./" }
-    opts.prompt_title = "Random title"
-    opts.path_display = { "smart" }
-    opts.shorten_path = true
-    require("telescope.builtin").live_grep(opts);
+    opts.search_dirs = { "~/" }
+    opts.prompt_title = "Home files"
+    opts.path_display = { "absolute" }
+    opts.hidden = true
+    require("telescope.builtin").find_files(opts);
 end
 
 require("telescope").setup {
@@ -32,6 +33,11 @@ require("telescope").setup {
                 ["<CR>"] = "select_default"
             },
             n = {
+                ["<C-a>"] = function()
+                    local entry = action_state.get_selected_entry()
+                    local current_path = entry[1]
+                    vim.keymap.set("n", "<C-f>", ':' .. current_path, options)
+                end
             }
         },
 
