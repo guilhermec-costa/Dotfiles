@@ -2,8 +2,7 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 local cmp_action = require('lsp-zero').cmp_action()
 
---[[ lspkind.init() ]]
-
+lspkind.init()
 cmp.setup({
     mapping = {
         -- `Enter` key to confirm completion

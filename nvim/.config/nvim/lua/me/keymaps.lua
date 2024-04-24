@@ -18,9 +18,12 @@ keymap('n', '<leader>q', ':q<Enter>', options)
 keymap('n', '<leader>pv', function() vim.cmd('Ex') end)
 keymap('n', '<leader>cl', ':nohlsearch<CR>', options)
 keymap('n', "<leader><leader>", ':so<CR>')
-keymap('n', '<leader>cp', '"kp')
--- window resizing
 
+-- register named k
+keymap('n', '<leader>kp', '"kp')
+keymap('n', '<leader>sp', '"+p')
+
+-- window resizing
 keymap('n', '<C-Up>', ':resize -2<CR>', options)
 keymap('n', '<C-Down>', ':resize +2<CR>', options)
 keymap('n', '<C-Right>', ':vertical resize +2<CR>', options)
