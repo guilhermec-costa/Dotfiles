@@ -21,7 +21,10 @@ keymap('n', "<leader><leader>", ':so<CR>')
 
 -- register named k
 keymap('n', '<leader>kp', '"kp')
+-- paste from system clipboard 
 keymap('n', '<leader>sp', '"+p')
+
+keymap({ 'n', 'v' }, '<leader>sy', '"+yy')
 
 -- window resizing
 keymap('n', '<C-Up>', ':resize -2<CR>', options)

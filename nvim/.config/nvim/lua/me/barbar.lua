@@ -9,17 +9,17 @@ require'barbar'.setup {
     buffer_index = true,
     buffer_number = false,
     button = '',
-    diagnostics = {
-      [vim.diagnostic.severity.ERROR] = {enabled = true, icon = '!'},
-      [vim.diagnostic.severity.WARN] = {enabled = false},
-      [vim.diagnostic.severity.INFO] = {enabled = false},
-      [vim.diagnostic.severity.HINT] = {enabled = true},
-    },
-    gitsigns = {
-      added = {enabled = true, icon = '+'},
-      changed = {enabled = true, icon = '~'},
-      deleted = {enabled = true, icon = '-'},
-    },
+    --[[ diagnostics = { ]]
+    --[[   [vim.diagnostic.severity.ERROR] = {enabled = true, icon = '!'}, ]]
+    --[[   [vim.diagnostic.severity.WARN] = {enabled = false}, ]]
+    --[[   [vim.diagnostic.severity.INFO] = {enabled = false}, ]]
+    --[[   [vim.diagnostic.severity.HINT] = {enabled = true}, ]]
+    --[[ }, ]]
+    --[[ gitsigns = { ]]
+    --[[   added = {enabled = true, icon = '+'}, ]]
+    --[[   changed = {enabled = true, icon = '~'}, ]]
+    --[[   deleted = {enabled = true, icon = '-'}, ]]
+    --[[ }, ]]
     filetype = {
       custom_colors = false,
       -- Requires `nvim-web-devicons` if `true`
