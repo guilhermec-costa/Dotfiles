@@ -1,4 +1,5 @@
 local home = os.getenv('HOME')
+vim.notify = require("notify")
 
 local bundles = {
     vim.fn.glob(
@@ -39,6 +40,7 @@ local config = {
 
     on_attach = function(client, bufrn)
         require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+        vim.notify("JDTLS configured")
     end,
 
     signatureHelp = { enabled = true },

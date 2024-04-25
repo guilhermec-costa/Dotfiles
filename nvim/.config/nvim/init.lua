@@ -16,3 +16,5 @@ autocmd('TextYankPost', {
         })
     end,
 })
+
+vim.notify = require("notify")
