@@ -1,6 +1,5 @@
-vim.cmd 'colorscheme default'
-
 local options = {
+    dim_inactive = true,
     styles = {
         functions = "bold",
         comments = "bold"
@@ -9,34 +8,45 @@ local options = {
 
 local palettes = {
     github_dark_colorblind = {
-        bg1 = "#000009",
-        bg2 = "#1b0045",
-        bg3 = "#1b0045",
-        bg4 = "#1b0045",
-        sel0 = '#1b0045',
-        fg1 = "#ddffff"
-    },
-    github_light = {
-        comment = '#636e7b',
+        bg1 = "#060009",
+        bg2 = "#060030",
+        bg3 = "#060050",
+        fg1 = "#ffffff",
+        fg2 = "#ffffff",
+        sel1 = "#c17fff",
+        magenta = {
+            base = "#c17fff",
+            bright = "#ff59d4"
+        },
+        yellow = {
+            base = "#ff9300"
+        },
     },
 }
+
 local specs = {
     github_dark_colorblind = {
         bg1 = "bg1",
         bg2 = "bg2",
         bg3 = "bg3",
-        fg2 = "fg1",
-        sel0 = "sel0",
-        inactive = "#ffffff"
+        fg1 = "fg1",
+        fg2 = "fg2",
+        fg3 = "magenta.base",
+        sel1 = "sel1",
+        syntax = {
+            keyword = "yellow.base",
+            bracket = "magenta.bright",
+        }
     }
 }
+
 local groups = {
-    all = {
-        IncSearch = { bg = 'palette.cyan' },
+    github_dark_colorblind = {
+        IncSearch = { bg = "palette.magenta.base" },
     },
 }
 
-require('github-theme').setup({
+require("github-theme").setup({
 
     options = options,
     palettes = palettes,
@@ -47,10 +57,10 @@ require('github-theme').setup({
 
 vim.cmd("colorscheme github_dark_colorblind")
 
---[[ vim.api.nvim_set_hl(0, "Normal", { bg = "none" }) ]]
+--[[ local default_color = "github_dark_colorblind" ]]
 --[[]]
 --[[ local color_status, _ = pcall(vim.cmd, "colorscheme " .. default_color) ]]
 --[[ if not color_status then ]]
---[[     vim.notify('Colorscheme ' .. default_color .. 'does not exist') ]]
+--[[     vim.notify("Colorscheme " .. default_color .. "does not exist") ]]
 --[[     return ]]
 --[[ end ]]
