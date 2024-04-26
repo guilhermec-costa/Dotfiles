@@ -31,7 +31,8 @@ return packer.startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'rose-pine/neovim'
-    use 'norcalli/nvim-colorizer.lua'
+    --[[ use 'norcalli/nvim-colorizer.lua' ]]
+    use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
     use 'lewis6991/gitsigns.nvim'

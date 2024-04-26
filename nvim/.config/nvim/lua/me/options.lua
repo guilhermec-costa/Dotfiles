@@ -6,9 +6,9 @@ vim.opt.numberwidth = 5
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-
 -- nvim.opt swap file creation
 vim.opt.swapfile = false
+vim.opt.termguicolors = true
 
 -- encvim.optder
 vim.opt.fileencoding = 'utf-8'
