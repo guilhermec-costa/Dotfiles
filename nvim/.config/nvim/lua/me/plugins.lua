@@ -33,7 +33,6 @@ return packer.startup(function(use)
     use 'rose-pine/neovim'
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
-    use 'rcarriga/nvim-notify'
     use 'mfussenegger/nvim-jdtls'
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
