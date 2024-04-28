@@ -16,3 +16,7 @@ autocmd('TextYankPost', {
     end,
 })
 
+
+_G.P = function (command)
+   print(vim.inspect(command))
+end

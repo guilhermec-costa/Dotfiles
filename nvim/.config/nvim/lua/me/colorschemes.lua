@@ -36,13 +36,16 @@ local specs = {
         syntax = {
             keyword = "yellow.base",
             bracket = "magenta.bright",
+            number = "#ffca5a",
+            field = "#54a4ff",
+            const = "#54a4f0",
         }
     }
 }
 
 local groups = {
     github_dark_colorblind = {
-        IncSearch = { bg = "palette.magenta.base" },
+        IncSearch = { bg = "palette.magenta.base", fg = "#ffffff" },
     },
 }
 
@@ -56,11 +59,3 @@ require("github-theme").setup({
 })
 
 vim.cmd("colorscheme github_dark_colorblind")
-
---[[ local default_color = "github_dark_colorblind" ]]
---[[]]
---[[ local color_status, _ = pcall(vim.cmd, "colorscheme " .. default_color) ]]
---[[ if not color_status then ]]
---[[     vim.notify("Colorscheme " .. default_color .. "does not exist") ]]
---[[     return ]]
---[[ end ]]

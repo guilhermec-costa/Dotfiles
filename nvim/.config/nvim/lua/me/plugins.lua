@@ -3,16 +3,16 @@ local fn = vim.fn
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP = fn.system({
-		"git",
-		"clone",
-		"--depth",
-		"1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
-	})
-	print("Installing packer close and reopen Neovim...")
-	vim.cmd([[packadd packer.nvim]])
+    PACKER_BOOTSTRAP = fn.system({
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    })
+    print("Installing packer close and reopen Neovim...")
+    vim.cmd([[packadd packer.nvim]])
 end
 
 
@@ -31,20 +31,22 @@ return packer.startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'folke/tokyonight.nvim'
     use 'rose-pine/neovim'
+    use '~/dev/nvim_plugins/random-nvim-plugin.nvim'
     --[[ use 'norcalli/nvim-colorizer.lua' ]]
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'
+    use 'nvim-pack/nvim-spectre'
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
-    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
     use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'mxsdev/nvim-dap-vscode-js'
     use {
-         "microsoft/vscode-js-debug",
-         opt = true,
-         run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+        "microsoft/vscode-js-debug",
+        opt = true,
+        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
 
     use 'windwp/nvim-ts-autotag'
@@ -113,5 +115,4 @@ return packer.startup(function(use)
     }
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'
-
 end)

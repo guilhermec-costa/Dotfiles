@@ -213,6 +213,11 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
   },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/nvim-pack/nvim-spectre"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -242,6 +247,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["random-nvim-plugin.nvim"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/random-nvim-plugin.nvim",
+    url = "/home/guichina/dev/nvim_plugins/random-nvim-plugin.nvim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
