@@ -85,6 +85,11 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["Tracker.nvim"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/Tracker.nvim",
+    url = "/home/guichina/dev/nvim_plugins/Tracker.nvim"
+  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/barbar.nvim",
@@ -248,11 +253,6 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["random-nvim-plugin.nvim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/random-nvim-plugin.nvim",
-    url = "/home/guichina/dev/nvim_plugins/random-nvim-plugin.nvim"
-  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -272,6 +272,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["vim-apm"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-apm",
+    url = "https://github.com/ThePrimeagen/vim-apm"
   },
   ["vim-fugitive"] = {
     loaded = true,

@@ -28,9 +28,6 @@ keymap('n', '<leader>sp', '"+p')
 -- copy to system clipboard
 keymap({ 'n', 'v' }, '<leader>sy', '"+yy')
 
--- apply recorded key ( "do again")
-keymap('n', '<leader>da', '@@')
-
 keymap("x", "<leader>p", [[ "_dP ]])
 -- window resizing
 keymap('n', '<C-Up>', ':resize -2<CR>', options)

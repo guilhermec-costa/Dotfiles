@@ -1,9 +1,4 @@
 require("me.telescope.mappings")
-local random_plugin = require("random-plugin")
-
-random_plugin.setup({
-    title = "Churros Augusto"
-})
 
 local options = { noremap = true }
 

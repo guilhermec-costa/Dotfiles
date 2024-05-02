@@ -8,14 +8,14 @@ local options = {
 
 local palettes = {
     github_dark_colorblind = {
-        bg1 = "#060009",
-        bg2 = "#060030",
+        bg1 = "#060001",
+        bg2 = "#060040",
         bg3 = "#060050",
         fg1 = "#ffffff",
         fg2 = "#ffffff",
-        sel1 = "#c17fff",
+        sel1 = "#b05fff",
         magenta = {
-            base = "#c17fff",
+            base = "#b05fff",
             bright = "#ff59d4"
         },
         yellow = {

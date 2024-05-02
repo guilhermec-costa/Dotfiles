@@ -29,9 +29,11 @@ return packer.startup(function(use)
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
     use 'projekt0n/github-nvim-theme'
+    use 'ThePrimeagen/vim-apm'
     use 'folke/tokyonight.nvim'
     use 'rose-pine/neovim'
-    use '~/dev/nvim_plugins/random-nvim-plugin.nvim'
+    use '~/dev/nvim_plugins/Tracker.nvim'
+    --[[ use 'GuiC0506/Tracker.nvim' ]]
     --[[ use 'norcalli/nvim-colorizer.lua' ]]
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
