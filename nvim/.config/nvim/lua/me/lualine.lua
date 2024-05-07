@@ -1,6 +1,6 @@
 require('lualine').setup {
     options = {
-        theme = "github_dark_high_contrast"
+        theme = "tokyonight"
     },
 
     sections = {
