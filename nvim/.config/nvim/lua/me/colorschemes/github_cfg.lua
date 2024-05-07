@@ -49,13 +49,9 @@ local groups = {
     },
 }
 
-require("github-theme").setup({
-
+return {
     options = options,
     palettes = palettes,
     specs = specs,
     groups = groups,
-
-})
-
-vim.cmd("colorscheme github_dark_colorblind")
+}

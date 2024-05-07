@@ -13,9 +13,6 @@ local yank_group = augroup('HighlightYank', {})
 
 local apm = require("vim-apm")
 
-apm:setup({})
-vim.keymap.set("n", "<leader>apm", function() apm:toggle_monitor() end)
-
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',

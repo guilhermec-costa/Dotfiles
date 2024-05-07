@@ -32,9 +32,12 @@ return packer.startup(function(use)
     use 'ThePrimeagen/vim-apm'
     use 'folke/tokyonight.nvim'
     use 'rose-pine/neovim'
-    use '~/dev/nvim_plugins/Tracker.nvim'
-    --[[ use 'GuiC0506/Tracker.nvim' ]]
-    --[[ use 'norcalli/nvim-colorizer.lua' ]]
+    use {
+        '~/dev/nvim_plugins/Tracker.nvim',
+        requires = {
+            "rcarriga/nvim-notify"
+        }
+    }
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'mfussenegger/nvim-jdtls'

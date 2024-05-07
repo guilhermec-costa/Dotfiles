@@ -47,6 +47,8 @@ keymap('n', '<leader>w', function()
     vim.cmd('w')
 end)
 
+keymap('n', '<leader>t', "<Plug>PlenaryTestFile")
+
 
 vim.keymap.set('n', "<leader>ca", '<Cmd>lua vim.lsp.buf.code_action()<CR>', options);
 vim.keymap.set('n', "<leader>rc", "<Cmd>lua vim.lsp.buf.range_code_action()<CR>",
