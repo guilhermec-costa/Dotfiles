@@ -29,6 +29,7 @@ return packer.startup(function(use)
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
     use 'projekt0n/github-nvim-theme'
+    use 'rxi/json.lua'
     use 'ThePrimeagen/vim-apm'
     use 'folke/tokyonight.nvim'
     use 'rose-pine/neovim'

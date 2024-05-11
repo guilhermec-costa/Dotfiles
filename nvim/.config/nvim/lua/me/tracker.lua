@@ -1,6 +1,5 @@
 local tracker = require("tracker")
 tracker.setup {
-    timer_debounce = 5000,
-    start_timer_on_launch = true,
+    event_debounce_time = 3000,
     allow_notifications = false
 }
