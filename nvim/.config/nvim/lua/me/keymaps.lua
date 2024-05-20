@@ -22,7 +22,7 @@ keymap('n', "<leader><leader>", ':so<CR>')
 -- register named k
 keymap('n', '<leader>kp', '"kp')
 
--- paste from system clipboard 
+-- paste from system clipboard
 keymap('n', '<leader>sp', '"+p')
 
 -- copy to system clipboard
@@ -88,5 +88,3 @@ vim.keymap.set('n', '<Space>bn', '<Cmd>BufferOrderByName<CR>', options)
 vim.keymap.set('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', options)
 vim.keymap.set('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', options)
 vim.keymap.set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', options)
-
-

@@ -28,11 +28,20 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
+    use 'fxn/vim-monochrome'
+    use 'jaredgorski/fogbell.vim'
     use 'projekt0n/github-nvim-theme'
     use 'rxi/json.lua'
-    use 'ThePrimeagen/vim-apm'
     use 'folke/tokyonight.nvim'
-    use 'rose-pine/neovim'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = {
+                "markdown" }
+        end,
+        ft = { "markdown" },
+    })
     use {
         '~/dev/nvim_plugins/Tracker.nvim',
         requires = {

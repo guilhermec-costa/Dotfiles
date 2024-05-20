@@ -3,7 +3,6 @@ local ui = require('harpoon.ui')
 local telescope = require('telescope')
 telescope.load_extension('harpoon')
 
-
 require("harpoon").setup({})
 
 vim.keymap.set('n', '<leader>h', ui.toggle_quick_menu)
