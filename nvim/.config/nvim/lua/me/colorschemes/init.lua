@@ -1,1 +1,1 @@
-vim.cmd("colorscheme monochrome")
+vim.cmd("colorscheme paramount")

@@ -5,7 +5,7 @@ require('me.colorschemes')
 require('me.telescope')
 require('me.lsp')
 require('me.treesitter')
-require('me.autopairs')
+--[[ require('me.autopairs') ]]
 require('me.harpoon')
 require('me.lualine')
 require('me.diagnostics')

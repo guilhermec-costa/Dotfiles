@@ -120,11 +120,6 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["fogbell.vim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/fogbell.vim",
-    url = "https://github.com/jaredgorski/fogbell.vim"
-  },
   ["github-nvim-theme"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
@@ -139,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["jellybeans.vim"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/jellybeans.vim",
+    url = "https://github.com/nanotech/jellybeans.vim"
   },
   ["json.lua"] = {
     loaded = true,
@@ -181,6 +181,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  nofrils = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nofrils",
+    url = "https://github.com/robertmeta/nofrils"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -290,15 +295,15 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-colors-paramount"] = {
+    loaded = true,
+    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
+    url = "https://github.com/owickstrom/vim-colors-paramount"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-monochrome"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-monochrome",
-    url = "https://github.com/fxn/vim-monochrome"
   },
   ["vscode-js-debug"] = {
     loaded = false,

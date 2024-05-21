@@ -25,11 +25,10 @@ style = "regular"
 [colors]
 draw_bold_text_with_bright_colors = true
 
-# TokyoNight Alacritty Colors
-# Default colors
-# [colors.primary]
-# background = '#1a1b26'
-# foreground = '#c0caf5'
+#Default colors
+[colors.primary]
+background = '#000000'
+foreground = '#c0caf5'
 
 #[colors.cursor]
 #cursor = '#c0caf5'
