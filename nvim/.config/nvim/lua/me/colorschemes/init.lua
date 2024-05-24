@@ -1,1 +1,1 @@
-vim.cmd("colorscheme paramount")
+vim.cmd("colorscheme kanagawa-dragon")

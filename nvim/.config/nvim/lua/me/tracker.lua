@@ -4,7 +4,7 @@ tracker.setup {
     allow_notifications = true,
     logs_permission = true,
     cleanup_session_files_on_session_end = false,
-    cleanup_log_files_on_session_end = true,
+    cleanup_log_files_on_session_end = false,
     persistence_location = "/home/guichina/.config/tracker/"
 }
 

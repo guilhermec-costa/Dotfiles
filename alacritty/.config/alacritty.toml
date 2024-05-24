@@ -1,9 +1,9 @@
-scrolling = { history = 10000 , multiplier = 3}
+scrolling = { history = 10000, multiplier = 3 }
 mouse.hide_when_typing = true
 mouse.bindings = [
-    {mouse="Right", action="ExpandSelection"},
-    {mouse="Right",mods="Control",action="Paste"},
-    {mouse="Right", mods="Shift", action="ExpandSelection"}
+    { mouse = "Right", action = "ExpandSelection" },
+    { mouse = "Right", mods = "Control", action = "Paste" },
+    { mouse = "Right", mods = "Shift", action = "ExpandSelection" },
 ]
 
 [window.padding]
@@ -11,12 +11,12 @@ y = 5
 x = 5
 
 [[keyboard.bindings]]
-key="v"
-action="ToggleViMode"
-mods="Control|Alt"
+key = "v"
+action = "ToggleViMode"
+mods = "Control|Alt"
 
 [font]
-normal.family = "Comic Sans MS"
+normal.family = "Monaspace Neon"
 normal.style = "bold"
 
 [font.bold]

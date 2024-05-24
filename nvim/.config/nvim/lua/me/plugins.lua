@@ -31,8 +31,10 @@ return packer.startup(function(use)
     use 'projekt0n/github-nvim-theme'
     use 'robertmeta/nofrils'
     use 'owickstrom/vim-colors-paramount'
+    use 'rebelot/kanagawa.nvim'
+    use { "ellisonleao/gruvbox.nvim" }
     use 'nanotech/jellybeans.vim'
-        use 'rxi/json.lua'
+    use 'rxi/json.lua'
     use 'folke/tokyonight.nvim'
     use({
         "iamcco/markdown-preview.nvim",
@@ -128,6 +130,14 @@ return packer.startup(function(use)
         config = function()
             require('Comment').setup()
         end
+    }
+
+    use {
+        "pmizio/typescript-tools.nvim",
+        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+        config = function()
+            require("typescript-tools").setup {}
+        end,
     }
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'
