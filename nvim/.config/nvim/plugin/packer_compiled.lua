@@ -120,30 +120,15 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
-  },
-  ["jellybeans.vim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/jellybeans.vim",
-    url = "https://github.com/nanotech/jellybeans.vim"
   },
   ["json.lua"] = {
     loaded = true,
@@ -164,11 +149,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lspkind.nvim"] = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
-    url = "https://github.com/onsails/lspkind.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -191,11 +171,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  nofrils = {
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/nofrils",
-    url = "https://github.com/robertmeta/nofrils"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -305,12 +280,6 @@ _G.packer_plugins = {
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
-  ["typescript-tools.nvim"] = {
-    config = { "\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0" },
-    loaded = true,
-    path = "/home/guichina/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
-    url = "https://github.com/pmizio/typescript-tools.nvim"
-  },
   ["vim-colors-paramount"] = {
     loaded = true,
     path = "/home/guichina/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
@@ -338,10 +307,6 @@ time([[Setup for markdown-preview.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
--- Config for: typescript-tools.nvim
-time([[Config for typescript-tools.nvim]], true)
-try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0", "config", "typescript-tools.nvim")
-time([[Config for typescript-tools.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

@@ -8,8 +8,15 @@ end)
 require('lspconfig').lua_ls.setup {
     settings = {
         Lua = {
+            workspace = {
+                checkThirdParty = false,
+                telemetry = { enable = false },
+                library = {
+                    "${3rd}/love2d/library"
+                }
+            },
             diagnostics = {
-                globals = { 'vim', 'P'  }
+                globals = { 'vim', 'P' }
             }
         }
     }

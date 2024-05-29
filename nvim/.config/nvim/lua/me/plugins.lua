@@ -28,12 +28,8 @@ return packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use 'tpope/vim-fugitive'
     use 'ThePrimeagen/harpoon'
-    use 'projekt0n/github-nvim-theme'
-    use 'robertmeta/nofrils'
     use 'owickstrom/vim-colors-paramount'
     use 'rebelot/kanagawa.nvim'
-    use { "ellisonleao/gruvbox.nvim" }
-    use 'nanotech/jellybeans.vim'
     use 'rxi/json.lua'
     use 'folke/tokyonight.nvim'
     use({
@@ -75,10 +71,6 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-cmdline'
     use "L3MON4D3/LuaSnip"
-    use 'onsails/lspkind.nvim'
-
-    --[[ use 'xiyaowong/transparent.nvim' ]]
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -130,14 +122,6 @@ return packer.startup(function(use)
         config = function()
             require('Comment').setup()
         end
-    }
-
-    use {
-        "pmizio/typescript-tools.nvim",
-        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-        config = function()
-            require("typescript-tools").setup {}
-        end,
     }
 
     use 'JoosepAlviste/nvim-ts-context-commentstring'

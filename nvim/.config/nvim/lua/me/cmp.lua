@@ -1,8 +1,6 @@
 local cmp = require('cmp')
-local lspkind = require('lspkind')
 local cmp_action = require('lsp-zero').cmp_action()
 
-lspkind.init()
 cmp.setup({
     mapping = {
         -- `Enter` key to confirm completion
@@ -35,20 +33,16 @@ cmp.setup({
             require("luasnip").lsp_expand(args.body)
         end
     },
-
     formatting = {
-        format = lspkind.cmp_format {
-            with_text = true,
-            menu = {
+        format = function(entry, vim_item)
+            vim_item.menu = ({
                 buffer = "[buf]",
                 nvim_lsp = "[LSP]",
                 nvim_lua = "[API]",
                 path = "[path]",
                 luasnip = "[snip]",
-            }
-        }
-    },
-    experimental = {
-        ghost_text = false
+            })[entry.source.name]
+            return vim_item
+        end,
     },
 })

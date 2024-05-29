@@ -20,7 +20,7 @@ normal.family = "Monaspace Neon"
 normal.style = "bold"
 
 [font.bold]
-family = "Comic Sans"
+family = "Monaspace Neon"
 style = "regular"
 [colors]
 draw_bold_text_with_bright_colors = true

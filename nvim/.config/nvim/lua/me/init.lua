@@ -19,4 +19,3 @@ require("me.git_signs")
 require("me.lua_snip")
 require("me.spectre")
 require("me.tracker")
-require "me.tstools"
