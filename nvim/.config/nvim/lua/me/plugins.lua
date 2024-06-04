@@ -31,7 +31,14 @@ return packer.startup(function(use)
     use 'owickstrom/vim-colors-paramount'
     use 'rebelot/kanagawa.nvim'
     use 'rxi/json.lua'
+    use { "diegoulloao/neofusion.nvim" }
     use 'folke/tokyonight.nvim'
+    use {
+        "loctvl842/monokai-pro.nvim",
+        config = function()
+            require("monokai-pro").setup()
+        end
+    }
     use({
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
@@ -112,6 +119,9 @@ return packer.startup(function(use)
     use {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
     }
 
     use {

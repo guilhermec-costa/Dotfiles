@@ -12,13 +12,13 @@ require('nvim-treesitter.configs').setup {
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,
     autopairs = { enable = true },
-    --[[ autotag = {
+    autotag = {
         enable = true,
         enable_rename = true,
         enable_close = true,
         enable_close_on_slash = true,
         filetypes = { "html", "xml" },
-    }, ]]
+    },
 
     indent = {
         enable = true
