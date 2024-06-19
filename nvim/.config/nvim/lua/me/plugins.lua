@@ -61,7 +61,11 @@ return packer.startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use 'romgrk/barbar.nvim'
     use { 'nvim-telescope/telescope-ui-select.nvim' }
+    use 'nvim-telescope/telescope-media-files.nvim'
     use 'mfussenegger/nvim-dap'
+    use {
+        "jay-babu/mason-nvim-dap.nvim",
+    }
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'mxsdev/nvim-dap-vscode-js'
     use {

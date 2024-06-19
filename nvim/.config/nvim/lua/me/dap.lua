@@ -1,12 +1,5 @@
 local dap = require("dap")
-local js_based_languages = { "typescript", "javascript", "typescriptreact" }
-
-vim.keymap.set('n', '<F5>', dap.continue)
-vim.keymap.set('n', '<F10>', dap.step_over)
-vim.keymap.set('n', '<F11>', dap.step_into)
-vim.keymap.set('n', '<F12>', dap.step_out)
-vim.keymap.set('n', '<Leader>b', dap.toggle_breakpoint)
-vim.keymap.set('n', '<Leader>B', dap.set_breakpoint)
+local js_based_languages = { "typescript", "javascript", "typescriptreact", "cpp" }
 
 require("dap-vscode-js").setup({
     node_path = "node",                                                                                                      -- Path of node executable. Defaults to $NODE_PATH, and then "node"
@@ -17,6 +10,13 @@ require("dap-vscode-js").setup({
     -- log_file_level = false, -- Logging level for output to file. Set to false to disable file logging.
     -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
 })
+
+--[[ dap.adapters.cpp = {
+    type = 'executable',
+    -- absolute path is important here, otherwise the argument in the `runInTerminal` request will default to $CWD/lldb-vscode
+    command = '/home/guichina/.local/share/nvim/mason/packages/codelldb/codelldb',
+    name = "lldb"
+} ]]
 
 for _, language in ipairs(js_based_languages) do
     dap.configurations[language] = {
@@ -41,6 +41,31 @@ for _, language in ipairs(js_based_languages) do
             url = "http://localhost:3000",
             webRoot = "${workspaceFolder}",
             userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
-        }
+        },
+        --[[ {
+            name = "Launch CPP executable",
+            type = "cpp",
+            request = "launch",
+            program = function()
+                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            end,
+            cwd = '${workspaceFolder}',
+            args = {}
+        } ]]
     }
 end
+
+
+vim.keymap.set('n', '<F5>', dap.continue)
+vim.keymap.set('n', '<F10>', dap.step_over)
+vim.keymap.set('n', '<F11>', dap.step_into)
+vim.keymap.set('n', '<F12>', dap.step_out)
+vim.keymap.set('n', '<leader>l', dap.toggle_breakpoint)
+vim.keymap.set('n', '<leader>L', dap.set_breakpoint)
+
+require("mason-nvim-dap").setup({
+    handlers = {},
+    ensure_installed={
+        "codelldb"
+    },
+})

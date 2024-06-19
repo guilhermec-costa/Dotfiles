@@ -43,9 +43,13 @@ keymap('v', '<A-j>', ':m .+2<CR>==gv', options)
 keymap('v', '<A-k>', ':m .-2<CR>==gv', options)
 
 keymap('n', '<leader>w', function()
-    vim.lsp.buf.format()
+    --[[ vim.lsp.buf.format() ]]
     vim.cmd('w')
 end)
+
+keymap('n', '<leader>F', vim.lsp.buf.format, {
+    noremap = true, silent = true
+})
 
 keymap('n', '<leader>t', "<Plug>PlenaryTestFile")
 

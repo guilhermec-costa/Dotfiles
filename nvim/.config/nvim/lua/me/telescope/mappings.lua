@@ -14,6 +14,11 @@ skm('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols, {})
 skm('n', 'gd', vim.lsp.buf.definition, {})
 skm('n', '<leader>rn', vim.lsp.buf.rename, {})
 skm('n', '<leader>D', require('telescope.builtin').diagnostics, {})
+skm('n', '<leader>dd', function()
+    require('telescope.builtin').diagnostics({
+        bufnr = 0
+    })
+end)
 skm('n', '<leader>gf', require('telescope.builtin').git_files, {})
 skm('n', '<leader>B', require('telescope.builtin').git_branches, {})
 skm('n', '<leader>R', require('telescope.builtin').registers, {})
